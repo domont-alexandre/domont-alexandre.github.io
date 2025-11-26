@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veille — Panne Cloudflare Novembre 2025</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="brand"><a href="index.html">Alexandre Domont</a></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#competences">Compétences</a></li>
+          <li><a href="index.html#etudes">Études</a></li>
+          <li><a href="index.html#productions">Productions</a></li>
+          <li><a href="index.html#veille">Veille</a></li>
+          <li><a href="index.html#experience">Expérience</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">Veille — Infrastructure Cloud</p>
+        <h1>Panne Cloudflare — 18 novembre 2025</h1>
+        <p>
+          Analyse d'un incident majeur qui a affecté une part significative du trafic web mondial.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="veille-enjeux-cloud.html">Enjeux & Leçons</a>
+          <a class="btn ghost" href="index.html#veille">Retour à la veille</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Contexte & Chronologie</p>
+          <h2>L'incident</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <h3>Début de la panne</h3>
+          <p>
+            Le 18 novembre 2025, vers 11h20 UTC (12h20 heure de Paris), Cloudflare a commencé à connaître 
+            « des échecs significatifs dans le traitement du trafic réseau » pour ses utilisateurs.
+          </p>
+          <p>
+            Résultat : de nombreux sites Web et services en ligne sont devenus indisponibles — pages affichant 
+            des erreurs 500, authentification bloquée, etc. L'interruption a affecté des plateformes majeures, 
+            partout dans le monde.
+          </p>
+        </article>
+
+        <article style="margin-bottom: 2rem;">
+          <h3>Origine technique</h3>
+          <p>
+            Cloudflare explique que l'incident n'a pas été causé par une cyberattaque ni un DDoS, mais par un 
+            changement de permissions sur un de ses systèmes de base de données.
+          </p>
+          <p>
+            Cette modification a entraîné la génération d'un « fichier de fonctionnalités » ("feature file") 
+            utilisé par son système de Bot Management. Ce fichier a doublé de taille, dépassant les limites 
+            attendues par le logiciel de routage.
+          </p>
+          <p>
+            Lorsque ce fichier a été propagé à l'ensemble du réseau Cloudflare, le système proxy central — 
+            chargé de router le trafic — a planté, provoquant l'indisponibilité.
+          </p>
+        </article>
+
+        <article style="margin-bottom: 2rem;">
+          <h3>Résolution</h3>
+          <p>
+            Cloudflare a stoppé la propagation du fichier problématique, puis restauré une version antérieure 
+            du fichier.
+          </p>
+          <p>
+            D'après les rapports, le trafic principal avait largement repris vers 14h30 UTC, et tous les systèmes 
+            étaient revenus à la normale vers 17h06 UTC.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Impact</p>
+          <h2>Pourquoi c'est grave</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            Cloudflare gère une part importante du trafic web mondial (estimée autour de 20 %) — ce qui explique 
+            pourquoi un problème interne peut devenir une panne globale.
+          </p>
+          <p>
+            En conséquence, des millions d'utilisateurs ont vu leurs sites préférés, applications ou services métier 
+            inaccessibles.
+          </p>
+          <p>
+            Outre le désagrément pour l'internaute, il y a des conséquences économiques pour de nombreuses entreprises 
+            (e-commerce, SaaS, médias, etc.), qui perdent des revenus ou ne peuvent pas assurer la continuité de leurs 
+            services.
+          </p>
+          <p>
+            L'incident met en lumière un risque structurel : la dépendance d'une grande partie d'internet à quelques 
+            géants (Cloudflare, AWS, etc.) rend l'ensemble vulnérable à un simple bug.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Rappel récent</p>
+          <h2>Panne AWS en octobre 2025</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            Juste un mois avant la panne Cloudflare, AWS avait aussi connu une interruption massive — le 20 octobre 2025 — 
+            dans sa région US-EAST-1.
+          </p>
+          <p>
+            Le problème a débuté tôt le matin (heure US), lié à un défaut de résolution DNS dans le service de base de 
+            données serveurless DynamoDB, ce qui a bloqué, en cascade, de nombreux services AWS (serveurs virtuels, bases, etc.).
+          </p>
+          <p>
+            Parmi les services touchés : des applications, jeux, plateformes de services, voire des outils de production.
+          </p>
+          <p>
+            Même si la panne était localisée, les effets se sont fait sentir globalement, ce qui rappelle que même les 
+            grands clouds peuvent devenir un point de fragilité.
+          </p>
+          <p>
+            Ce précédent met donc en perspective l'épisode Cloudflare : deux géants du cloud ont failli — à quelques semaines 
+            d'intervalle — ce qui interroge sur la robustesse et la résilience de l'infrastructure du web moderne.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Alexandre Domont — Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

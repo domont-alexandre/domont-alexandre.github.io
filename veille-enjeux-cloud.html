@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veille — Enjeux & Leçons des Pannes Cloud</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <div class="brand"><a href="index.html">Alexandre Domont</a></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="index.html#apropos">À propos</a></li>
+          <li><a href="index.html#competences">Compétences</a></li>
+          <li><a href="index.html#etudes">Études</a></li>
+          <li><a href="index.html#productions">Productions</a></li>
+          <li><a href="index.html#veille">Veille</a></li>
+          <li><a href="index.html#experience">Expérience</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">Veille — Infrastructure Cloud</p>
+        <h1>Enjeux & Leçons des Pannes Cloud</h1>
+        <p>
+          Analyse des risques structurels et des stratégies de résilience face à la centralisation de l'infrastructure web.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="veille-panne-cloudflare.html">Voir l'incident Cloudflare</a>
+          <a class="btn ghost" href="index.html#veille">Retour à la veille</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Fragilité du Cloud Centralisé</p>
+          <h2>Un simple bug peut tout faire tomber</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            Les pannes récentes (Cloudflare en novembre 2025, AWS en octobre 2025) montrent qu'un simple bug de 
+            configuration, ou un souci sur un des services centraux, peut entraîner une rupture massive de services 
+            à l'échelle mondiale.
+          </p>
+          <p>
+            Cela met en question l'idée selon laquelle le cloud, c'est la garantie de la haute disponibilité. 
+            La centralisation autour de quelques acteurs majeurs crée des points de défaillance uniques (single 
+            points of failure) qui peuvent affecter des millions d'utilisateurs.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Stratégies de Résilience</p>
+          <h2>Importance de la redondance & diversification</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <h3>Stratégie multicloud</h3>
+          <p>
+            Pour les entreprises (ou porteurs de site) — s'appuyer sur un seul fournisseur cloud/CDN/infrastructure 
+            peut devenir un risque : il serait plus prudent d'adopter une stratégie multicloud ou hybride, voire une 
+            architecture résiliente multi-fournisseurs.
+          </p>
+          <p>
+            Cette approche permet de répartir les risques et d'assurer la continuité de service même en cas de panne 
+            d'un fournisseur majeur.
+          </p>
+        </article>
+
+        <article style="margin-bottom: 2rem;">
+          <h3>Architecture distribuée</h3>
+          <p>
+            À l'avenir, la robustesse d'un service pourrait dépendre moins d'un fournisseur unique, et plus d'une 
+            architecture distribuée, redondante, voire d'un cloud souverain — pour servir des entreprises sensibles, 
+            ou des services critiques.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Transparence & Infrastructure Critique</p>
+          <h2>Nécessité de diversifier l'écosystème</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            Ces incidents rappellent la nécessité de diversifier l'écosystème de l'internet — CDN, hébergeurs, clouds — 
+            pour éviter que quelques acteurs ne deviennent des single points of failure.
+          </p>
+          <p>
+            La transparence des fournisseurs sur leurs incidents, leurs causes et leurs mesures correctives est également 
+            cruciale pour permettre aux entreprises de prendre des décisions éclairées.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Souveraineté Numérique</p>
+          <h2>Question de souveraineté des données</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            Quand des services globaux (souvent non-européens) tombent, leurs retombées peuvent être massives pour des 
+            entreprises européennes. Cela peut renforcer l'intérêt pour des solutions cloud « souveraines » ou nationalisées, 
+            afin d'éviter dépendance et risques externes.
+          </p>
+          <p>
+            La souveraineté numérique devient un enjeu stratégique, particulièrement en Europe, où la dépendance aux 
+            géants américains du cloud pose des questions de sécurité, de conformité réglementaire (RGPD) et de résilience 
+            économique.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="eyebrow">Perspectives</p>
+          <h2>Ce que cela révèle… et ce qu'il faut surveiller</h2>
+        </div>
+        <article style="margin-bottom: 2rem;">
+          <p>
+            On découvre à quel point l'infrastructure du web est concentrée autour de quelques acteurs dominants — ce qui 
+            représentait un avantage pour la performance et la scalabilité, mais un gros risque en terme de résilience.
+          </p>
+          <p>
+            Ces pannes récentes sont comme un signal d'alarme : elles incitent à repenser la manière dont on conçoit 
+            l'hébergement, la redondance, la tolérance aux pannes.
+          </p>
+          <p>
+            À surveiller dans les prochains mois et années :
+          </p>
+          <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+            <li>L'émergence de solutions cloud souveraines européennes</li>
+            <li>L'adoption croissante de stratégies multicloud par les entreprises</li>
+            <li>Les améliorations de la transparence et de la communication des incidents par les fournisseurs</li>
+            <li>Le développement d'architectures distribuées et résilientes</li>
+            <li>Les réglementations visant à réduire la dépendance à quelques acteurs</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Alexandre Domont — Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

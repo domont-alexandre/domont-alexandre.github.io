@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Alexandre Domont</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero" id="accueil">
+      <nav class="navbar">
+        <div class="brand"><a href="index.html">Alexandre Domont</a></div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#etudes">Études</a></li>
+          <li><a href="#productions">Productions</a></li>
+          <li><a href="#veille">Veille</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul> 
+      </nav>
+      <div class="hero-content">
+        <p class="eyebrow">Backend Developer</p>
+        <h1>Bienvenue sur le portfolio d'Alexandre Domont ! </h1>
+        <p>
+          Passionné par la sécurité informatique, les réseaux et les systèmes.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Me contacter</a>
+          <a class="btn ghost" href="#productions">Découvrir mes projets</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section about" id="apropos">
+        <div class="section-header">
+          <p class="eyebrow">À propos</p>
+          <h2>Mon profil</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>Moi</h3>
+            <p>
+              - 18 ans
+              <br>
+              - Curieux
+              <br>
+              - Bon relationnel
+            </p>
+          </article>
+          <article>
+            <h3>Objectifs</h3>
+            <p>
+              Mes objectifs sont de réussir dans le domaine de la cybersécurité et d'apprendre le plus possible.
+          </article>
+          <article>
+            <h3>Valeurs</h3>
+            <p>
+              Écoute, transparence, curiosité, exigence sur moi même, ponctualité.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills" id="competences">
+        <div class="section-header">
+          <p class="eyebrow">Compétences</p>
+          <h2>Mon socle technique</h2>
+        </div>
+        <div class="skills-grid">
+          <a class="card-link" href="404.html">
+            <article>
+              <h3>Gestion de projet</h3>
+              <ul>
+                <li>PERT & Gantt</li>
+                <li>Amortissement</li>
+                <li>RGPD</li>
+              </ul>
+            </article>
+          </a>
+          <a class="card-link">
+            <article>
+              <h3>DNS</h3>
+            </article>
+          </a>
+          <a class="card-link">
+            <article>
+              <h3>VLAN</h3>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section class="section timeline" id="etudes">
+        <div class="section-header">
+          <p class="eyebrow">Études</p>
+          <h2>Mon parcours académique </h2>
+        </div>
+        <div class="timeline-list">
+          <article>
+            <span class="timeline-date">2024 - 2026</span>
+            <h3>BTS SIO</h3>
+            <p>Spécialité SISR – Solutions d'infrastructure, systèmes et réseaux.</p>
+          </article>
+          <article>
+            <span class="timeline-date">2021 - 2024</span>
+            <h3>Lycée Paul Duez</h3>
+            <p>Bac général – Mathématiques, Numérique et Sciences Informatiques.</p>
+          </article>
+          <article>
+            <span class="timeline-date">2017 - 2021</span>
+            <h3>Collège Paul Duez</h3>
+            <p>Brevet des collèges.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects" id="productions">
+        <div class="section-header">
+          <p class="eyebrow">Productions</p>
+          <h2>Projets récents</h2>
+        </div>
+        <div class="projects-grid">
+          <a class="card-link" href="404.html">
+            <article>
+              <h3>Plateforme e-learning</h3>
+              <p>
+                Interface multi-tenant, dashboard analytics et modules responsives
+                pour 5 000 utilisateurs.
+              </p>
+              <span class="link">Voir le cas d'étude</span>
+            </article>
+          </a>
+          <a class="card-link" href="404.html">
+            <article>
+              <h3>Site événementiel</h3>
+              <p>
+                Landing page immersive avec animations WebGL, +35% d'inscriptions
+                en trois semaines.
+              </p>
+              <span class="link">Voir le cas d'étude</span>
+            </article>
+          </a>
+          <a class="card-link" href="404.html">
+            <article>
+              <h3>Outil interne</h3>
+              <p>
+                Application React pour orchestrer les opérations et réduire les
+                tâches manuelles.
+              </p>
+              <span class="link">Voir le cas d'étude</span>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section class="section spotlight" id="veille">
+        <div class="section-header">
+          <p class="eyebrow">Veille</p>
+          <h2>Actualités informatiques</h2>
+        </div>
+        <div class="spotlight-grid">
+          <a class="card-link" href="veille-panne-cloudflare.html">
+            <article>
+              <h3>Panne Cloudflare — Novembre 2025</h3>
+              <p>
+                Analyse d'un incident majeur qui a affecté une part significative 
+                du trafic web mondial et révélé la fragilité de l'infrastructure cloud.
+              </p>
+            </article>
+          </a>
+          <a class="card-link" href="veille-enjeux-cloud.html">
+            <article>
+              <h3>Enjeux & Leçons des Pannes Cloud</h3>
+              <p>
+                Fragilité du cloud centralisé, stratégies de résilience, 
+                souveraineté numérique et diversification de l'infrastructure.
+              </p>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-header">
+          <p class="eyebrow">Expérience</p>
+          <h2>Stages et expériences professionnelles</h2>
+        </div>
+        <div class="experience-list">
+          <article>
+            <div>
+              <h3>Stage à la SNCF Voyageur à Saint Quentin</h3>
+              <p>Mai à Juin 2025</p>
+            </div>
+            <p>
+              Répondre à des demande utilisateur, observation du matient des applications SNCF.
+            </p>
+          </article>
+          <article>
+            <div>
+              <h3>Flunch</h3>
+              <p>Septembre 2025 - Aujourd'hui</p>
+            </div>
+            <p>
+              J’occupe actuellement le poste de caissier au sein de l’enseigne Flunch, 
+              où je veille à offrir un accueil client de grande qualité et à accompagner 
+              les clients dans leur orientation.
+            </p>
+          </article>
+          <article>
+            <div>
+              <h3>Marcher couvert à Cambrai</h3>
+              <p>Mai 2024 à Août 2025</p>
+            </div>
+            <p>
+              J’ai précédemment occupé la fonction de responsable d’un stand au marché couvert de Cambrai, 
+              où j’étais en charge de l’installation du stand, de son organisation quotidienne, 
+              de l’accueil et de l’orientation des clients, ainsi que de la gestion de la caisse.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-header">
+          <p class="eyebrow">Contact</p>
+          <h2>Parlons de votre prochain projet</h2>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="nom@exemple.com"
+              required
+            />
+          </div>
+          <div class="form-group full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Décrivez votre besoin"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn primary">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Alexandre Domont — Tous droits réservés.</p>
+      <p>Disponible pour toutes questions.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
