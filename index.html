@@ -6,6 +6,7 @@
     <title>Portfolio - Alexandre Domont</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header class="hero" id="accueil">
       <nav class="navbar">
@@ -73,7 +74,9 @@
           <p class="eyebrow">Compétences</p>
           <h2>Mon socle technique</h2>
         </div>
+        
         <div class="skills-grid">
+          <!--
           <a class="card-link">
             <article>
               <h3>Gestion de projet</h3>
@@ -158,6 +161,56 @@
             </article>
           </a>
 
+        -->
+
+
+
+
+          <a class="card-link">
+            <article>
+              <h3>Infrastructure Réseau & Sécurité</h3>
+              <ul>
+                <li>Routage : Statique, Dynamique, InterVLAN</li>
+                <li>Protocoles de niveau 2/3 : VLAN, VTP</li>
+                <li>Sécurité des accès : SSH</li>
+                <li>Résolution de noms : DNS</li>
+              </ul>
+            </article>
+          </a>
+
+          <a class="card-link">
+            <article>
+              <h3>Administrateur Système & Environnement Windows</h3>
+              <ul>
+                <li>Active Directory : Réplication d'AD, GPO</li>
+                <li>Services Windows : Web DNS Windows</li>
+                <li>Disponibilité & Continuité : Sauvegarde, Haute Disponibilité (HAProxy)</li>
+              </ul>
+            </article>
+          </a>
+
+          <a class="card-link">
+            <article>
+              <h3>Stockage & Gestion de Données</h3>
+              <ul>
+                <li>Services de fichiers : DFS</li>
+                <li>Réplication : DFSR (DFS Replication)</li>
+              </ul>
+            </article>
+          </a>
+
+          <a class="card-link">
+            <article>
+              <h3>Pilotage, Gouvernance & Support</h3>
+              <ul>
+                <li>Gestion de projet : PERT & GANTT, Amortissement</li>
+                <li>Conformité : RGPD</li>
+                <li>Gestion de parc & Support : GLPI</li>
+              </ul>
+            </article>
+          </a>
+
+
         </div>
       </section>
 
@@ -191,34 +244,31 @@
           <h2>Projets scolaires & personnels</h2>
         </div>
         <div class="projects-grid">
-          <a class="card-link" href="b21.html">
+          <a class="card-link protected-link" data-page="b21.html">
             <article>
               <h3>B2 1er année BTS SIO</h3>
-              <p>
-                Travaux pratique réaliser par rapport à notre spécialiter BTS SIO.
-              </p>
-              <span class="link">Voir le cas d'étude</span>
+              <p>Travaux pratique réaliser par rapport à notre spécialiter BTS SIO.</p>
+              <span class="link">Voir</span>
             </article>
           </a>
-          <a class="card-link" href="b22.html">
+          <a class="card-link protected-link" data-page="b22.html">
             <article>
               <h3>B2 2ème année BTS SIO</h3>
-              <p>
-                Travaux pratique réaliser par rapport à notre spécialiter BTS SIO.
-              </p>
-              <span class="link">Voir le cas d'étude</span>
+              <p>Travaux pratique réaliser par rapport à notre spécialiter BTS SIO.</p>
+              <span class="link">Voir</span>
             </article>
           </a>
-          <a class="card-link" href="404.html">
+          
+          <!-- <a class="card-link" href="404.html">
             <article>
               <h3>Application poiur apprendre le latin</h3>
               <p>
                 Application React pour orchestrer les opérations et réduire les
                 tâches manuelles.
               </p>
-              <span class="link">Voir le cas d'étude</span>
+              <span class="link">Voir</span>
             </article>
-          </a>
+          </a> -->
         </div>
       </section>
 
@@ -312,6 +362,24 @@
       <p>© 2025 Alexandre Domont — Tous droits réservés.</p>
       <p>Disponible pour toutes questions.</p>
     </footer>
+
+    <div class="password-modal" id="passwordModal">
+  <div class="modal-content">
+    <h3>🔒 Accès protégé</h3>
+    <p>Entrez le mot de passe pour continuer</p>
+
+    <input type="password" id="passwordInput" placeholder="Mot de passe">
+    <p class="error" id="passwordError"></p>
+    <p class="success" id="passwordSuccess"></p>
+
+    <div class="modal-actions">
+      <button id="cancelBtn">Annuler</button>
+      <button id="confirmBtn">Valider</button>
+    </div>
+    </div>
+    </div>
+
+
 
     <script src="script.js"></script>
   </body>

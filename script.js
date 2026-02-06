@@ -35,8 +35,55 @@ links.forEach((link) => {
 
 
 
+const modal = document.getElementById("passwordModal");
+const passwordInput = document.getElementById("passwordInput");
+const errorText = document.getElementById("passwordError");
+const successText = document.getElementById("passwordSuccess");
 
+const confirmBtn = document.getElementById("confirmBtn");
+const cancelBtn = document.getElementById("cancelBtn");
 
+let targetPage = "";
 
+// 🔑 MOT DE PASSE
+const PASSWORD = "bts2024";
 
+document.querySelectorAll(".protected-link").forEach(link => {
+  link.addEventListener("click", () => {
+    targetPage = link.dataset.page;
+    modal.classList.add("active");
+    passwordInput.value = "";
+    errorText.textContent = "";
+    successText.textContent = "";
+    passwordInput.focus();
+  });
+});
+
+confirmBtn.addEventListener("click", checkPassword);
+cancelBtn.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (e) => {
+  if (!modal.classList.contains("active")) return;
+
+  if (e.key === "Enter") checkPassword();
+  if (e.key === "Escape") closeModal();
+});
+
+function checkPassword() {
+  if (passwordInput.value === PASSWORD) {
+    errorText.textContent = "";
+    successText.textContent = "Accès autorisé ✔";
+
+    setTimeout(() => {
+      window.location.href = targetPage;
+    }, 700);
+  } else {
+    successText.textContent = "";
+    errorText.textContent = "Mot de passe incorrect ❌";
+  }
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+}
 
